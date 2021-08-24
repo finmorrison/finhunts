@@ -21,6 +21,7 @@ get_header();
 			the_post();
 		endwhile; 
 		?>		
+		<?php the_content(); ?>
 				
 		<?php 
 		//Display all Flexible Content
