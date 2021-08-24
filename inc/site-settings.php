@@ -64,12 +64,12 @@ add_action('init', 'register_my_session');
 /***********************************************************************
  * Disable Gutenberg
  **********************************************************************/
-function wps_deregister_styles() {
-    wp_dequeue_style( 'wp-block-library' );
-}
-add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
-add_filter('use_block_editor_for_post', '__return_false', 10);
-add_filter('use_block_editor_for_post_type', '__return_false', 10);
+// function wps_deregister_styles() {
+//     wp_dequeue_style( 'wp-block-library' );
+// }
+// add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
+// add_filter('use_block_editor_for_post', '__return_false', 10);
+// add_filter('use_block_editor_for_post_type', '__return_false', 10);
 
  /***********************************************************************
  * Image Quality adjustment so that resized images aren't crappy crap
