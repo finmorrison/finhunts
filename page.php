@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all pages
  *
@@ -15,19 +16,23 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-		<?php
-		while ( have_posts() ) :
-			the_post();
-		endwhile; 
-		?>		
-		<?php the_content(); ?>
-				
-		<?php 
-		//Display all Flexible Content
-		get_template_part( 'template-parts/flexible-content' ); 
-		?>
-	</main>
+<main id="primary" class="site-main">
+	<?php
+	while (have_posts()) :
+		the_post();
+	endwhile;
+	?>
+	<div class="container">
+		<div class="row">
+			<div class="col-12"><?php the_content(); ?></div>
+		</div>
+	</div>
+
+	<?php
+	//Display all Flexible Content
+	get_template_part('template-parts/flexible-content');
+	?>
+</main>
 
 <?php
 get_footer();
